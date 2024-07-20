@@ -79,12 +79,12 @@ def print_results(errors, mismatches):
 
 if __name__ == "__main__":
     if len(sys.argv) != 3:
-        print("- Usage: python fdiffs.py <directory1> <directory2>")
+        print("Usage: python3 verify.py <directory1> <directory2>")
         sys.exit(1)
     
     dir1, dir2 = sys.argv[1], sys.argv[2]
     if not all(map(os.path.isdir, [dir1, dir2])):
-        print("- Error: One or both specified paths are not valid directories.")
+        print("Error: One or both specified paths are not valid directories.")
         sys.exit(1)
     
     main(dir1, dir2)
